@@ -406,14 +406,17 @@ a:hover .link-arrow i,
 	max-width: min(220px, 52vw);
 	object-fit: contain;
 }
-/* Logo art is light-on-transparent; invert for the light header while keeping teal readable. */
+/* Source logo is dark; keep it on light surfaces, invert to light on dark surfaces. */
 [data-bs-theme="light"] .site-header .brand-logo {
+	filter: none;
+}
+[data-bs-theme="dark"] .site-header .brand-logo,
+.brand-footer .brand-logo {
 	filter: invert(1) hue-rotate(180deg);
 }
 .brand-footer .brand-logo {
 	height: 52px;
 	max-width: min(260px, 80vw);
-	filter: none;
 }
 
 .navbar-toggler {
@@ -705,7 +708,8 @@ a:hover .link-arrow i,
 	border-radius: var(--r-lg);
 	opacity: 0.35;
 }
-.hero-media img {
+.hero-media img,
+.hero-media .hero-video {
 	position: relative;
 	width: 100%;
 	height: clamp(380px, 66dvh, 600px);
@@ -726,7 +730,8 @@ a:hover .link-arrow i,
 	.hero-media {
 		margin-inline: auto 22px;
 	}
-	.hero-media img {
+	.hero-media img,
+	.hero-media .hero-video {
 		height: clamp(320px, 60vw, 480px);
 	}
 	.hero-title {
@@ -2219,7 +2224,8 @@ a:hover .article-img img {
 		animation: heroUp 0.95s var(--ease) both;
 		animation-delay: calc(var(--d, 0) * 90ms + 120ms);
 	}
-	.hero-media img {
+	.hero-media img,
+	.hero-media .hero-video {
 		animation: heroImg 1.3s var(--ease) both;
 	}
 	.hero-media::before {
