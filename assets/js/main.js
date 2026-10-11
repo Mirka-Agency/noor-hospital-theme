@@ -234,7 +234,7 @@
     noraShell.classList.add('is-open');
     noraFab.setAttribute('aria-expanded', 'true');
     playNoraVideo();
-    setTimeout(function () { noraInput.focus(); }, 50);
+    noraPanel.focus({ preventScroll: true });
   }
 
   function closeNora() {
