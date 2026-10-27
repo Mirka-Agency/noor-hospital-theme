@@ -2030,15 +2030,6 @@ a:hover .article-img img {
 .footer-credit a:hover {
 	border-bottom-color: #ffffff;
 }
-.trust-slot {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.4rem;
-	padding: 0.45rem 0.9rem;
-	border: 1px dashed rgba(255, 255, 255, 0.2);
-	border-radius: var(--r-sm);
-	color: #c9d6de;
-}
 
 /* Nora assistant & back to top
    ========================================================================== */
